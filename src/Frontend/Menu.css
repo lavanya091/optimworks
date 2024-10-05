@@ -1,0 +1,83 @@
+.menu-container {
+    max-width: 100%;
+    margin: 20px; /* Center the menu horizontally */
+    padding: 20px; /* Padding around the menu */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+}
+  
+.menu-item {
+    border: 1px solid #ccc; /* Border for each item */
+    border-radius: 8px; /* Rounded corners */
+    width: 400px; /* Fixed width */
+    height: 500px; /* Fixed height */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    padding: 10px; /* Padding inside the item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+}
+  
+  .menu-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Adjust as needed */
+    gap: 20px; /* Space between items */
+  }
+  
+  .menu-header {
+    text-align: center; /* Centered header */
+    margin-bottom: 20px; /* Space below the header */
+    color: #333; /* Dark text color */
+    font-size: 2rem; /* Larger font size */
+}
+
+
+.menu-item:last-child {
+    border-bottom: none; /* Remove border for last item */
+}
+
+.menu-item h4 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.5rem; /* Font size for item name */
+    color: #555; /* Slightly lighter text color */
+}
+
+.menu-item span {
+    font-size: 1.2rem; /* Font size for item price */
+    color: #28a745; /* Green color for price */
+}
+
+
+
+.menu-item button:hover {
+    background-color: #0056b3; 
+}
+
+.menu-item img {
+    max-width: 100%; /* Responsive image */
+    max-height: 150px; /* Limit the height of images */
+    object-fit: cover; /* Maintain aspect ratio, cropping if necessary */
+}
+
+.menu-item button {
+    padding: 10px 15px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    font-size: 1rem; /* Button text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color change */
+}
+
+
+
+@media (max-width: 768px) {
+    .menu-items-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust for smaller screens */
+    }
+}
+
