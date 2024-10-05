@@ -1,4 +1,3 @@
-// OrderDetails.js
 import React, { useRef } from 'react';
 import './OrderDetails.css';
 
@@ -10,14 +9,13 @@ function OrderDetails({ setOrderPlaced, handleOrderPlacement }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Call the handleOrderPlacement function with the order details
         handleOrderPlacement({
             tableNumber: tableData.current.value,
             contactNumber: mobilenumber.current.value,
             date: dates.current.value,
             time: time.current.value,
         });
-        setOrderPlaced(true); // Set orderPlaced to true after submitting
+        setOrderPlaced(true); 
         tableData.current.value = "";
         mobilenumber.current.value = "";
         dates.current.value = "";

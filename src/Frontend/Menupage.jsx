@@ -94,10 +94,18 @@ function Menupage() {
           )}
         </div>
 
-        <Link to="/cart" className="cart-link">🛒 View Cart</Link>
-        <Link to="/order-history" className="order-history-link">
-          <button>View Order History</button>
-        </Link>
+        <Link to="/cart" className="cart-link">
+  <button style={{ padding: '10px 20px', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
+    🛒 View Cart
+  </button>
+</Link>
+
+<Link to="/order-history" className="order-history-link">
+  <button style={{ padding: '10px 20px', backgroundColor: '#2196F3', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
+    View Order History
+  </button>
+</Link>
+
 
         <Routes>
           <Route path="/cart" element={<CartDisplay cart={cart} orderPlaced={orderPlaced} />} />
